@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
   name: 'dev',
-  baseUrl: 'http://localhost:4200',
+  baseUrl: 'https://github.com/edosirait/todo-list',
   DOMAIN_URL: 'https://todo.api.devcode.gethired.id',
 };
