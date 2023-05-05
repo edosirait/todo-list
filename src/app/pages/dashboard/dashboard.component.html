@@ -1,0 +1,23 @@
+<div class="header">
+  <app-header [titleHeader]="titleHeader"></app-header>
+</div>
+<div class="container-dashboard">
+  <div class="container-content">
+    <app-title-menu [titleMenu]="titleMenu" (clickAdd)="onAdd()"></app-title-menu>
+    <div *ngIf="listActivity.length == 0">
+      <img style="cursor: pointer" (click)="onAdd()" [src]="logoEmptyState" alt="logoEmptyState">
+    </div>
+    <div class="card-content">
+      <mat-card data-cy="card-item" class="card-item" *ngFor="let item of listActivity">
+        <mat-card-content (click)="onClickContent(item.id)" data-cy="card-body" class="card-body">
+          <h4 data-cy="card-title" class="card-item-title-">{{item.title}}</h4>
+        </mat-card-content>
+        <mat-card-footer data-cy="card-footer" class="card-footer">
+          {{item.created_at | date: 'dd MMMM yyyy'}}
+          <img style="cursor: pointer;" (click)="onDelete(item.id)" [src]="deleteIcon"
+               data-cy="icon-delete" alt="deleteIcon">
+        </mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</div>

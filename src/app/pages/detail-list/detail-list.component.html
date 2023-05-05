@@ -1,0 +1,31 @@
+<div class="header">
+  <app-header [titleHeader]="titleHeader"></app-header>
+</div>
+
+<div class="container-dashboard">
+  <div class="container-content">
+    <app-title-menu [titleMenu]="todoList.title" [isEdit]="true" [inputEdit]="inputEdit"
+                    (clickAdd)="onAdd()"
+                    (clickEdit)="onEdit()"
+                    (clickBack)="onBack()"
+                    (inputBlur)="inputBlur($event)">
+    </app-title-menu>
+    <div *ngIf="todoList.todo_items && todoList.todo_items.length == 0">
+      <img style="cursor: pointer" (click)="onAdd()" [src]="logoTodoEmptyState" alt="logoEmptyState">
+    </div>
+    <div class="list-content">
+      <mat-card class="item-list" *ngFor="let itemList of todoList.todo_items">
+        <mat-card-content style="display: flex; justify-content: space-between">
+           <img *ngIf="itemList.priority == 'very-high'" [src]="ellipseRed" alt="ellipseRed" />
+           <img *ngIf="itemList.priority == 'high'" [src]="ellipseYellow" alt="ellipseYellow" />
+           <img *ngIf="itemList.priority == 'normal'" [src]="ellipseGreen" alt="ellipseGreen" />
+           <img *ngIf="itemList.priority == 'low'" [src]="ellipseBlue" alt="ellipseBlue" />
+           <img *ngIf="itemList.priority == 'very-low'" [src]="ellipsePurple" alt="ellipsePurple" />
+          {{itemList.title}}
+          <img style="cursor: pointer;"
+               (click)="deleteDialog(itemList.id)" [src]="deleteIcon" alt="deleteIcon"/>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

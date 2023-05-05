@@ -1,0 +1,33 @@
+<div class="dialog-container">
+  <div class="dialog-header">
+    <div class="dialog-title">
+      <h4>{{titleAddItem}}</h4>
+      <img style="cursor:pointer;" (click)="onClose()" [src]="crossIcon" alt="crossIcon">
+    </div>
+  </div>
+  <div class="dialog-body">
+    <label data-cy="modal-add-name-title">{{labelNameList}}</label>
+    <input [(ngModel)]="addTodoList.title" data-cy="input-title"
+           placeholder="Tambahkan nama Activity" id="AddFormTitle" class="input-control">
+    <div style="display:flex; flex-direction: column; gap: 4px">
+      <label data-cy="modal-add-name-title">Priority</label>
+      <button class="select-filed" [matMenuTriggerFor]="menu"
+               aria-label="Example icon-button with a menu">
+        <img [src]="selectedOption.color" alt="colorItem" />
+        {{selectedOption.range}}
+      </button>
+      <mat-menu #menu="matMenu">
+        <button class="btn-select" data-cy="button-select" mat-menu-item *ngFor="let item of rangePriority"
+                (click)="selectedOption = item; selectItem(item)" [value]="item">
+          <img [src]="item.color" alt="colorItem" />
+          {{item.range}}
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+  <div class="dialog-footer">
+    <button (click)="onSave()" data-cy="label-save" class="btn-delete" mat-button>
+      {{labelSave}}
+    </button>
+  </div>
+</div>

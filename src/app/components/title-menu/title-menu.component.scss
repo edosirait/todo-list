@@ -1,0 +1,42 @@
+.container-title-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+}
+
+.btn-add-container {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-add {
+  background: #16abf8;
+  padding: 13.5px 29px;
+  border-radius: 45px;
+  color: white !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+}
+
+.content-title {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  gap: 16px;
+}
+
+.inp {
+  border:none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: bold;
+}

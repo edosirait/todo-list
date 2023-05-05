@@ -1,0 +1,19 @@
+<div class="dialog-container">
+  <div data-cy="alert-icon" class="dialog-header">
+    <img [src]="alertIcon" alt="alertIcon">
+  </div>
+  <div class="dialog-body">
+    <p data-cy="text-delete" class="text-delete">
+      {{deleteQuestion}}
+      <strong>{{dataUser.title}}</strong>
+    </p>
+  </div>
+  <div class="dialog-footer">
+      <button (click)="onCancel()" data-cy="button-cancel" class="btn-cancel" mat-button>
+        {{btnCancel}}
+      </button>
+      <button (click)="onDelete()" data-cy="button-delete" class="btn-delete" mat-button>
+        {{btnDelete}}
+      </button>
+  </div>
+</div>

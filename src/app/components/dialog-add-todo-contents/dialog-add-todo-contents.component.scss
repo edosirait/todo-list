@@ -1,0 +1,126 @@
+.dialog-container {
+  width: 830px;
+  border-radius: 12px;
+  border: 0;
+  padding: 10px 4px 4px;
+
+  .dialog-header {
+    height: 70px;
+    padding: 24px 30px;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+  }
+
+  .dialog-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 11px 0 0;
+    width: 100%;
+  }
+
+  .dialog-body {
+    display: flex;
+    flex-direction: column;
+    padding: 38px 41px 38px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 8px;
+  }
+
+  .dialog-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: calc(0.3rem - 1px);
+    border-bottom-left-radius: calc(0.3rem - 1px);
+  }
+}
+
+.text-delete {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.btn-cancel {
+  background: #f4f4f4 !important;
+  color: #4a4a4a !important;
+  width: 150px;
+  height: 54px;
+  margin: 0 10px;
+  padding: 13.5px 29px;
+  border-radius: 45px;
+  font-weight: 600 !important;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background-color: #16abf8;
+  color: white;
+  padding: 13.5px 29px;
+  width: 150px;
+  height: 54px;
+  margin: 0 10px;
+  border-radius: 45px;
+  font-weight: 600 !important;
+  cursor: pointer;
+}
+
+.input-control {
+  height: 52px;
+  margin-bottom: 26px;
+  display: block;
+  width: 736px;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.select-filed {
+  width: 205px;
+  height: 52px;
+  border-radius: 6px;
+  border: 1px solid #e5e5e5;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  cursor: default;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  min-height: 38px;
+  position: relative;
+  transition: all 100ms ease 0s;
+  box-sizing: border-box;
+  outline: 0 !important;
+  padding: 10px;
+  gap: 14px;
+}
+
+.btn-select {
+  display: flex;
+  width: 210px;
+  gap: 4px;
+  cursor: pointer;
+}

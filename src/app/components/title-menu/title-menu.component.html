@@ -1,0 +1,14 @@
+<div class="container-title-menu">
+  <div data-cy="content-title" class="content-title">
+    <img style="cursor: pointer;" *ngIf="isEdit" (click)="onBack()" [src]="backButton" alt="backButton">
+    <h2 *ngIf="!inputEdit">{{titleMenu}}</h2>
+    <input *ngIf="inputEdit" class="inp" name="titleMenu" [(ngModel)]="titleMenu" (blur)="blur()"/>
+    <img *ngIf="isEdit" (click)="onEdit()" [src]="editButton" alt="editButton">
+  </div>
+  <div data-cy="content-button-add" class="btn-add-container">
+    <button (click)="onAdd()" class="btn-add" mat-button>
+      <mat-icon>add</mat-icon>
+      {{textBtnTambah}}
+    </button>
+  </div>
+</div>
